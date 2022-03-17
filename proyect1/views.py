@@ -12,3 +12,4 @@ def Inicio (request, nombre):
 def plantillaza(request):
 
     return render(request, "mi-plantilla.html")
+    
