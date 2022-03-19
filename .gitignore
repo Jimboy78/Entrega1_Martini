@@ -1,8 +1,7 @@
-<<<<<<< HEAD
 venv
 db.sqlite3
 __pycache__
-=======
+cspell.json
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -132,4 +131,3 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
->>>>>>> a922a40e57626f015a5d6a31889d8c5d86b2034e

@@ -3,7 +3,7 @@ from .views import Inicio, plantillaza
 
 urlpatterns = [
     
-    path('', Inicio),
+    path('', Inicio, name="index"),
     path('plantillaza/', plantillaza),
     
 ]
