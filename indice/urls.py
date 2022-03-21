@@ -1,10 +1,9 @@
 from django.urls import path
-from .views import Inicio, plantillaza
+from .views import Inicio
 
 urlpatterns = [
     
     path('', Inicio, name="index"),
-    path('plantillaza/', plantillaza),
     
 ]
  

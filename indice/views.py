@@ -7,9 +7,3 @@ def Inicio (request):
 
     return render(request, "index.html", {})
     
-
-def plantillaza(request):
-
-    return render(request, "mi-plantilla.html")
-
-    
