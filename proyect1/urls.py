@@ -21,5 +21,8 @@ urlpatterns = [
     path('verduleria/', include("Verduleria.urls")),
     path('admin/', admin.site.urls),
 
+
+
+    
 ]
  
