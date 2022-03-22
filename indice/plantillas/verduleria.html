@@ -1,4 +1,26 @@
-<!DOCTYPE html>
+{% extends "index.html" %}
+
+{% block nav %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href= {% url 'index'%}>Fresh Juice</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href= {% url 'agregar_modelo_verdus'%}>+ Verduras</a></li>
+                    <li class="nav-item"><a class="nav-link" href= {% url 'agregar_modelo_frutas'%}>+ Frutas</a></li>
+                    <li class="nav-item"><a class="nav-link" href= {% url 'agregar_modelo_frutos_secos'%}>+ Frutos secos</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+{% endblock nav %}
+
+
+
+
+
+{% comment %} <!DOCTYPE html>
 <html lang="en">
 <head>
     {% load static %}
@@ -15,4 +37,4 @@
         <li class="nav-item"><a class="nav-link active" aria-current="page" href= {% url 'agregar_modelo_frutos_secos'%}>Add frutos secos</a></li>
     </ul>
 </body>
-</html>
+</html> {% endcomment %}
