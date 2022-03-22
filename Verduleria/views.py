@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 from .models import Verduras,Frutas,Fruto_Secos
-from .forms import Verduras_formulario,Frutas_formulario,Fruto_Secos_formulario
+from .forms import Verduras_formulario,Frutas_formulario,Fruto_Secos_formulario,Busqueda_Producto_Formulario
 
 # Create your views here.
 
@@ -52,4 +52,22 @@ def agregar_modelo_frutos_secos(request):
 
     form = Fruto_Secos_formulario()
     return render(request, "formulario_fruto_seco.html", {"form": form}) 
+
+
+def lista_producto(request):
+
+    producto_a_buscar = request.GET.get('nombre',None)
+
+    if producto_a_buscar is not None:
+        productos = Verduras.objects.filter(nombre__icontains=producto_a_buscar)
+    elif producto_a_buscar is not None:
+        productos = Frutas.objects.filter(nombre__icontains=producto_a_buscar)
+    elif producto_a_buscar is not None:
+        productos = Fruto_Secos.objects.filter(nombre__icontains=producto_a_buscar)
+    else:
+        productos = Verduras.objects.all()
+    
+    form = Busqueda_Producto_Formulario()
+    return render(request, "lista_producto.html", {"form": form, 'productos': productos}) 
+
     

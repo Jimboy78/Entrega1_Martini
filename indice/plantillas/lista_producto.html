@@ -1,0 +1,28 @@
+{% extends "Plantilla_formularios.html" %}
+
+{% block Contentblock %}
+<section class="py-5">
+    <div class="container my-5">
+        <div class="col-lg-6">
+            
+            <h1>
+                Buscar producto
+            </h1>
+            <form action="" method="get">
+                {% csrf_token %}
+                <table>
+                    {{form.as_table}}
+                </table>
+                <button>
+                    Buscar
+                </button>
+            </form>
+
+            {% for producto in productos  %}
+                <li>{{producto}}</li>
+            {% endfor %}
+
+        </div>
+    </div>
+</section>
+{% endblock Contentblock %}

@@ -7,5 +7,6 @@ urlpatterns = [
     path('form_verduras/', views.agregar_modelo_verduras, name="agregar_modelo_verdus"),
     path('form_frutas/', views.agregar_modelo_frutas, name="agregar_modelo_frutas"),
     path('form_frutos_secos/', views.agregar_modelo_frutos_secos, name="agregar_modelo_frutos_secos"),
+    path('buscar/productos/', views.lista_producto, name="lista_producto"),
 ]
  

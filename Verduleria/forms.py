@@ -13,3 +13,6 @@ class Frutas_formulario (forms.Form):
 class Fruto_Secos_formulario (forms.Form):
     nombre = forms.CharField(max_length=20)
     precio = forms.CharField(max_length=4)
+
+class Busqueda_Producto_Formulario(forms.Form):
+    nombre = forms.CharField(max_length=20)
